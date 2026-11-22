@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="ja" style="--game-brightness: 1.00;"><head>
-<meta charset="utf-8"><meta content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" name="viewport"><meta content="#100d20" name="theme-color"><meta content="最大8体のキューブプレイヤーがお菓子を集め、4種類の行動をする追跡お化けを避けて秘密通路を探すアクションゲーム。" name="description"><meta content="お菓子集めゲーム" name="application-name">
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" name="viewport"/><meta content="#100d20" name="theme-color"/><meta content="最大8体のキューブプレイヤーがお菓子を集め、4種類の行動をする追跡お化けを避けて秘密通路を探すアクションゲーム。" name="description"/><meta content="お菓子集めゲーム" name="application-name"/>
 <title>お菓子集めゲーム POWER-UP+ | Game Hub</title>
 <style>
 :root{--bg:#090b18;--panel:rgba(17,19,39,.88);--line:#ffffff25;--green:#79f6a4;--purple:#c49aff;--gold:#ffd978;--text:#f7f4ff;--muted:#b7b4ca}
@@ -42,13 +44,13 @@
 /* POWER-UP+ modes, auto matchmaking, lobby news and source viewer */
 .mode-launchers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 8px}
 .mode-launch{min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 7px;border:1px solid #ffffff2a;border-radius:13px;background:linear-gradient(145deg,#ffffff12,#ffffff06);color:#fff;text-align:center}
-.mode-launch span{font-size:24px}.mode-launch b{font-size:10px}.mode-launch small{font-size:8px;color:#c8c2d7;line-height:1.35}.mode-launch.tutorial{border-color:#8ec5ff77}.mode-launch.practice{border-color:#8ef6ac77}.mode-launch.local2{border-color:#d7a8ff77}
+.mode-launch span{font-size:24px}.mode-launch b{font-size:10px}.mode-launch small{font-size:8px;color:#c8c2d7;line-height:1.35}.mode-launch.tutorial{border-color:#8ec5ff77}.mode-launch.practice{border-color:#8ef6ac77}
 .auto-match-box{margin-top:10px;padding:10px;border:1px solid #d4b4ff44;border-radius:12px;background:#b68bff0b}.auto-match-box>label{font-size:10px;font-weight:900;color:#e5d2ff}.auto-match-box input{min-width:0}.auto-match-note{font-size:9px;line-height:1.55;color:#bbb3cf;margin-top:6px}
 .lobby-strength-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0 12px;text-align:left}.lobby-strength-grid .field select{width:100%;padding:9px;border:1px solid #ffffff2c;border-radius:10px;background:#201d38;color:#fff;font-size:11px}
 .lobby-news{margin:12px 0;padding:12px;border:1px solid #ffffff25;border-radius:14px;background:#090d1ccc;text-align:left}.lobby-news h3{margin:0 0 8px;color:#caffd9;font-size:12px}.lobby-news article{padding:8px 9px;border:1px solid #ffffff16;border-radius:10px;background:#ffffff08}.lobby-news article+article{margin-top:7px}.lobby-news b{font-size:10px;color:#eee8fa}.lobby-news p{margin:4px 0;color:#c9c3d8;font-size:9px;line-height:1.6}.lobby-news small{font-size:8px;color:#9f98b5}
-.mode-hud{position:absolute;left:50%;top:86px;transform:translateX(-50%);z-index:7;display:flex;flex-direction:column;align-items:center;gap:5px;width:min(540px,85%);padding:10px 13px;border:1px solid #ffffff35;border-radius:13px;background:#0b1020e9;color:#f7f2ff;text-align:center;box-shadow:0 8px 26px #0008;pointer-events:auto}.mode-hud b{font-size:12px;color:#bfffd2}.mode-hud span{font-size:10px;line-height:1.5}.mode-hud small{font-size:9px;color:#c7bedb}.mode-hud button{padding:6px 10px;margin:2px;font-size:9px}.local2-hud{top:auto;bottom:100px;width:min(660px,90%)}
+.mode-hud{position:absolute;left:50%;top:86px;transform:translateX(-50%);z-index:7;display:flex;flex-direction:column;align-items:center;gap:5px;width:min(540px,85%);padding:10px 13px;border:1px solid #ffffff35;border-radius:13px;background:#0b1020e9;color:#f7f2ff;text-align:center;box-shadow:0 8px 26px #0008;pointer-events:auto}.mode-hud b{font-size:12px;color:#bfffd2}.mode-hud span{font-size:10px;line-height:1.5}.mode-hud small{font-size:9px;color:#c7bedb}.mode-hud button{padding:6px 10px;margin:2px;font-size:9px}
 .source-dialog{width:min(900px,98%);height:min(92%,760px);display:flex;flex-direction:column;gap:7px}.source-tabs,.source-actions{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}.source-tabs .active{border-color:#8ef6ac;background:#8ef6ac22}.source-dialog textarea{width:100%;flex:1;min-height:220px;resize:vertical;background:#080d19;color:#d8f8e3;border:1px solid #ffffff2a;border-radius:10px;padding:12px;font:11px/1.5 ui-monospace,Consolas,monospace;tab-size:2;white-space:pre;overflow:auto;text-align:left}.source-actions button{font-size:9px;padding:8px 10px}
-@media(max-width:700px){.mode-launchers{grid-template-columns:1fr}.mode-launch{flex-direction:row;text-align:left;justify-content:flex-start}.mode-launch span{width:30px}.mode-launch small{margin-left:auto;text-align:right;max-width:42%}.lobby-strength-grid{grid-template-columns:1fr}.mode-hud{top:64px;width:94%;padding:7px 9px}.local2-hud{top:auto;bottom:104px}.source-dialog{padding:12px 9px}.source-dialog textarea{font-size:9px}.source-actions button{padding:7px 8px}}
+@media(max-width:700px){.mode-launchers{grid-template-columns:1fr}.mode-launch{flex-direction:row;text-align:left;justify-content:flex-start}.mode-launch span{width:30px}.mode-launch small{margin-left:auto;text-align:right;max-width:42%}.lobby-strength-grid{grid-template-columns:1fr}.mode-hud{top:64px;width:94%;padding:7px 9px}.source-dialog{padding:12px 9px}.source-dialog textarea{font-size:9px}.source-actions button{padding:7px 8px}}
 
 
 /* Expanded lobby and clearly separated online modes */
@@ -500,7 +502,7 @@
 #menuOverlay .mode-launch:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.34);filter:none}
 #menuOverlay .mode-launch.tutorial{background:linear-gradient(150deg,rgba(48,111,93,.34),rgba(16,25,39,.82));border-color:rgba(121,246,164,.28)}
 #menuOverlay .mode-launch.practice{background:linear-gradient(150deg,rgba(70,75,143,.34),rgba(16,22,42,.82));border-color:rgba(153,166,255,.28)}
-#menuOverlay .mode-launch.local2{background:linear-gradient(150deg,rgba(129,80,149,.32),rgba(25,19,42,.84));border-color:rgba(196,154,255,.3)}
+
 #menuOverlay .mode-launch span{font-size:27px;line-height:1}
 #menuOverlay .mode-launch b{font-size:clamp(11px,.85vw,13px);line-height:1.35}
 #menuOverlay .mode-launch small{font-size:10px;line-height:1.4;color:#c4bfd1}
@@ -642,7 +644,7 @@
 #menuOverlay .mode-launch span{grid-row:1 / span 2;font-size:23px}
 #menuOverlay .mode-launch b{font-size:11px;color:#e4edf3}
 #menuOverlay .mode-launch small{font-size:9px;color:#8fa1b2;line-height:1.35}
-#menuOverlay .mode-launch.tutorial,#menuOverlay .mode-launch.practice,#menuOverlay .mode-launch.local2{border-color:rgba(171,195,218,.16)}
+#menuOverlay .mode-launch.tutorial,#menuOverlay .mode-launch.practice{border-color:rgba(171,195,218,.16)}
 #menuOverlay .menu-start-wrap{margin:0 0 9px}
 #menuOverlay #startBtn{width:100%;min-height:44px;border-radius:9px;background:linear-gradient(100deg,#a9e9c5,#80d9ad);color:#10281f;font-size:13px;box-shadow:none}
 #menuOverlay .terms-entry{justify-content:flex-start;gap:7px;margin:0}
@@ -747,7 +749,7 @@
 #menuOverlay .mode-launch.tutorial>span{background:rgba(105,188,151,.13)}
 #menuOverlay .mode-launch.practice>span{background:rgba(107,169,206,.13)}
 #menuOverlay .mode-launch.solo>span{background:rgba(238,190,111,.13)}
-#menuOverlay .mode-launch.local2>span{background:rgba(179,151,226,.14)}
+
 #menuOverlay .mode-launch.online>span{background:rgba(101,165,219,.15)}
 #menuOverlay .home-utilities{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;margin:0!important;padding-top:2px}
 #menuOverlay .home-utilities .secondary{margin:0;padding:8px 12px;font-size:10px}
@@ -832,12 +834,7 @@
   background:linear-gradient(155deg,rgba(111,55,43,.97),rgba(51,34,39,.98))!important;
   border-color:rgba(255,155,112,.78)!important;
 }
-#menuOverlay .mode-launchers-five > .mode-launch.local2{
-  --mode-accent:#c5a0ff;--mode-border:rgba(197,160,255,.78);--mode-glow:rgba(174,126,255,.30);
-  --mode-icon-bg:rgba(181,138,255,.21);--mode-description:#e0d0ff;
-  background:linear-gradient(155deg,rgba(76,49,117,.98),rgba(39,32,66,.98))!important;
-  border-color:rgba(197,160,255,.8)!important;
-}
+
 #menuOverlay .mode-launchers-five > .mode-launch.online{
   --mode-accent:#72c7ff;--mode-border:rgba(114,199,255,.78);--mode-glow:rgba(67,172,255,.30);
   --mode-icon-bg:rgba(91,183,255,.21);--mode-description:#c5e8ff;
@@ -954,12 +951,107 @@
 #lobbyOverlay .lobby-help-card{background:linear-gradient(135deg,rgba(39,111,106,.42),rgba(21,31,57,.93))!important;border-color:rgba(110,220,197,.25)!important}
 </style>
 
-<style>#pwHud{position:absolute;left:13px;top:84px;z-index:3;pointer-events:none;padding:7px 10px;border:1px solid #ffffff25;border-radius:12px;background:#0d1024dd;font-size:10px;min-width:150px;display:none}#pwHud b{color:#ffd978;font-size:14px}#pwBar{height:5px;background:#ffffff1c;border-radius:9px;margin:5px 0;overflow:hidden}#pwBar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffd978,#ff8fd8,#8ec5ff)}#pwIcons{font-size:12px}#pwLv{position:absolute;inset:0;z-index:9;display:none;place-items:center;background:#070815d0;backdrop-filter:blur(6px)}#pwLv h3{margin:0;font-size:26px;color:#ffd978;text-align:center}#pwLv p{margin:4px 0 0;text-align:center;font-size:11px;color:#c9c4d6}.pwCards{display:flex;gap:10px;margin-top:14px;justify-content:center;flex-wrap:wrap}.pwCard{width:185px;padding:14px 10px;border:1px solid #ffd97888;border-radius:16px;background:linear-gradient(145deg,#2a2545,#14162c);color:#fff;font-size:11px;line-height:1.5;transition:.15s}.pwCard span{display:block;font-size:34px}.pwCard b{display:block;font-size:14px;margin:3px 0}.pwCard em{color:#8ef6ac;font-style:normal;font-size:10px}.pwCard:hover{transform:translateY(-4px);box-shadow:0 0 24px #ffd97866}@media(max-width:700px){#pwHud{top:68px;left:6px;min-width:110px}.pwCard{width:30%;min-width:96px;padding:9px 5px;font-size:9px}}</style><style>#svHud{position:absolute;left:50%;top:60px;transform:translateX(-50%);z-index:3;pointer-events:none;width:170px;text-align:center;font-size:9px;font-weight:900;letter-spacing:.1em;color:#ffd0a0;display:none}#svBar{height:8px;border:1px solid #ffffff40;border-radius:9px;background:#0d1024dd;overflow:hidden;margin-top:3px}#svBar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff9a5a,#ff5a8a,#c49aff)}#svHud.ready{color:#fff;animation:pulse .5s infinite alternate}#svHud.ready #svBar{box-shadow:0 0 16px #ff7aa0}#svBtn{position:absolute;right:10px;bottom:140px;z-index:5;width:59px;height:59px;border-radius:50%;border:1px solid #ffffff55;background:#4a1d45d9;color:#fff;font-size:22px;display:none;touch-action:none}@media(max-width:700px){#svHud{top:52px;width:130px}}@media(min-width:701px){#svBtn{display:none!important}}</style><style>#sbBox{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:10;min-width:260px;padding:12px 16px;border:1px solid #ffffff40;border-radius:16px;background:#0d1024ee;display:none;font-size:12px;pointer-events:none}#sbBox h4{margin:0 0 8px;text-align:center;color:#ffd978}.sbr{display:flex;gap:8px;align-items:center;padding:3px 0}.sbr i{width:9px;height:9px;border-radius:50%}.sbr span{flex:1}#rxBar{flex-wrap:wrap;max-height:78%}</style></head>
+
+<style id="ui-contrast-accessibility-refresh">
+/* Readability refresh: menus, dialogs, controls and labels only. Game canvas colors remain untouched. */
+#menuOverlay .menu-flow-dialog,
+#menuOverlay .nexus-section,
+#menuOverlay .settings .field,
+#menuOverlay .online-hub,
+#menuOverlay .online-choice,
+.overlay .dialog,
+#rulesOverlay .dialog,
+#termsOverlay .dialog,
+#lobbyOverlay .dialog,
+#pauseOverlay .dialog,
+#resultOverlay .dialog,
+#joinOverlay .dialog,
+#sourceOverlay .source-dialog {
+  color:#fff !important;
+}
+#menuOverlay .nexus-section{background:rgba(8,17,32,.94)!important;border-color:rgba(190,215,240,.34)!important}
+#menuOverlay .nexus-section-head h3{color:#e8fff1!important}
+#menuOverlay .nexus-section-head span,
+#menuOverlay .mode-row-note,
+#menuOverlay .terms-entry span,
+#menuOverlay .course-note,
+#menuOverlay .notice,
+#menuOverlay .sub,
+#menuOverlay .field label,
+#menuOverlay .settings .field label,
+#menuOverlay .difficulty-help,
+#menuOverlay .online-choice-lead,
+#menuOverlay .online-choice ol,
+#menuOverlay .online-choice-foot,
+#menuOverlay .online-nick-row label,
+#menuOverlay .auto-url-label {color:#e0eaf5!important}
+#menuOverlay .settings .field{background:#101e32!important;border:1px solid #7188a5!important}
+#menuOverlay .settings .field select,
+#menuOverlay input,
+#menuOverlay textarea,
+#menuOverlay .online-nick-row input,
+#menuOverlay .auto-url-row input,
+#menuOverlay select,
+.overlay input,
+.overlay textarea,
+.overlay select,
+.dialog input,
+.dialog textarea,
+.dialog select {
+  background:#071426!important;color:#fff!important;border:1px solid #91a9c6!important;
+  border-radius:8px!important;outline-offset:2px;
+}
+#menuOverlay select option,.overlay select option,.dialog select option{background:#071426;color:#fff}
+#menuOverlay input::placeholder,.overlay input::placeholder,.dialog input::placeholder,
+#menuOverlay textarea::placeholder,.overlay textarea::placeholder{color:#b9c8d9!important;opacity:1}
+#menuOverlay button,.overlay button,.dialog button{font-weight:750;text-shadow:none}
+#menuOverlay button:not(.primary),.overlay button:not(.primary),.dialog button:not(.primary){
+  color:#fff!important;background-color:#263b56;border:1px solid #91a9c6;
+}
+#menuOverlay button:hover,.overlay button:hover,.dialog button:hover{filter:brightness(1.18)}
+#menuOverlay .mode-launch{background:#142b43!important;border:1px solid #8ca9c8!important}
+#menuOverlay .mode-launch b{color:#fff!important}
+#menuOverlay .mode-launch small{color:#e0eaf5!important}
+#menuOverlay #startBtn,.overlay button.primary,.dialog button.primary{background:linear-gradient(100deg,#b9f3d1,#8de2b5)!important;color:#092619!important;border:1px solid #d5ffe5!important}
+#menuOverlay .online-choice{background:#14263d!important;border:1px solid #829bb8!important}
+#menuOverlay .online-choice h3,#menuOverlay .online-hub-heading b{color:#fff!important}
+#menuOverlay .online-choice-kicker{color:#c9dcf0!important}
+#menuOverlay .front-rules-table th,#menuOverlay .front-rules-table td{color:#f4f7fb!important}
+#menuOverlay .menu-rules .front-rules-table tbody th{color:#caffd9!important}
+#menuOverlay .menu-rules .front-rules-table td{color:#f0f4fa!important}
+#menuOverlay .progress,#menuOverlay .online-nick-row{background:#12243a!important;border:1px solid #526d8c!important}
+#menuOverlay .progress strong,#menuOverlay #xpText,#menuOverlay #matchText{color:#f4f8ff!important}
+.overlay .dialog{background:#111e32!important;border:1px solid #8199b7!important;box-shadow:0 18px 60px #000b!important}
+.overlay .dialog p,.overlay .dialog .sub,.overlay .dialog label,.overlay .dialog li,.overlay .dialog small{color:#e7edf6}
+.overlay .dialog h2,.overlay .dialog h3{color:#fff}
+#rulesOverlay .rule-card,#termsOverlay .terms-body section{background:#1a2b42!important;border:1px solid #617995!important;color:#f4f7fb!important}
+#rulesOverlay .rule-card p,#termsOverlay .terms-body p{color:#e6edf6!important}
+#sourceOverlay textarea{background:#071426!important;color:#fff!important;border:1px solid #91a9c6!important}
+#menuOverlay button:focus-visible,.overlay button:focus-visible,.dialog button:focus-visible,
+#menuOverlay input:focus-visible,#menuOverlay select:focus-visible,.overlay input:focus-visible,.overlay select:focus-visible{outline:3px solid #ffe28a!important}
+@media(max-width:700px){#menuOverlay .settings{grid-template-columns:1fr!important}#menuOverlay .online-choice{padding:13px!important}}
+</style>
+<style id="home-mode-four-color-row">
+/* Only the four mode buttons on the initial home screen are changed. */
+#menuOverlay .mode-picker-section .mode-launchers{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;overflow:visible!important}
+#menuOverlay .mode-picker-section .mode-launch{min-width:0!important;min-height:112px!important;padding:12px 9px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:7px!important;text-align:center!important;border-width:2px!important;border-style:solid!important;border-radius:14px!important;box-shadow:inset 0 1px 0 #ffffff30!important}
+#menuOverlay .mode-picker-section .mode-launch>span{font-size:26px!important;line-height:1.1}
+#menuOverlay .mode-picker-section .mode-launch>b{font-size:clamp(10px,.9vw,13px)!important;color:#fff!important}
+#menuOverlay .mode-picker-section .mode-launch>small{font-size:clamp(8px,.7vw,10px)!important;color:#fff!important;line-height:1.35}
+#menuOverlay .mode-picker-section .mode-launch.tutorial{background:linear-gradient(145deg,#a81724,#e53935)!important;border-color:#ff8585!important}
+#menuOverlay .mode-picker-section .mode-launch.practice{background:linear-gradient(145deg,#124b9a,#1976d2)!important;border-color:#83bdff!important}
+#menuOverlay .mode-picker-section .mode-launch.solo{background:linear-gradient(145deg,#a66a00,#f9a825)!important;border-color:#ffe082!important}
+#menuOverlay .mode-picker-section .mode-launch.online{background:linear-gradient(145deg,#176b37,#2e9d50)!important;border-color:#8be6a8!important}
+#menuOverlay .mode-picker-section .mode-launch:hover{filter:brightness(1.12)!important;transform:translateY(-2px)}
+@media(max-width:700px){#menuOverlay .mode-picker-section .mode-launchers{grid-template-columns:repeat(4,minmax(132px,1fr))!important;overflow-x:auto!important;overflow-y:hidden!important;padding:2px 2px 8px!important}#menuOverlay .mode-picker-section .mode-launch{min-height:104px!important;padding:10px 7px!important}}
+</style>
+
+</head>
 <body><div id="shell">
-<header class="topbar"><div class="brand"><div class="brand-mark">🍬</div><div><h1>お菓子集めゲーム</h1><small>お菓子を集めて秘密通路を探すアクションゲーム</small></div></div><div class="top-right"><div class="top-chip">🟢 TEAM GREEN　VS　TEAM PURPLE</div><button class="icon-btn" id="soundBtn" title="効果音 ON">🔊</button><button class="icon-btn" id="fullBtn" title="全画面">⛶</button><button class="icon-btn" id="pauseBtn" title="一時停止">Ⅱ</button><button class="icon-btn" id="restartBtn" title="やり直す">↻</button><button class="icon-btn" id="sourceBtn" title="ソースコード表示">&lt;/&gt;</button></div></header>
-<main id="arena"><canvas aria-label="8体のキューブプレイヤーと追跡お化け4体のプレイ画面" height="720" id="game" width="2032"></canvas>
+<header class="topbar"><div class="brand"><div class="brand-mark">🍬</div><div><h1>お菓子集めゲーム</h1><small>お菓子を集めて秘密通路を探すアクションゲーム</small></div></div><div class="top-right"><div class="top-chip">🟢 TEAM GREEN　VS　TEAM PURPLE</div><button class="icon-btn" id="soundBtn" title="効果音">🔊</button><button class="icon-btn" id="fullBtn" title="全画面">⛶</button><button class="icon-btn" id="pauseBtn" title="一時停止">Ⅱ</button><button class="icon-btn" id="restartBtn" title="やり直す">↻</button><button class="icon-btn" id="sourceBtn" title="ソースコード表示">&lt;/&gt;</button></div></header>
+<main id="arena"><canvas aria-label="8体のキューブプレイヤーと追跡お化け4体のプレイ画面" height="720" id="game" width="1200"></canvas>
 <div id="hud"><div class="team"><i class="dot green"></i><div><div class="team-label">TEAM GREEN</div><div class="score" id="greenScore">0</div></div></div><div class="timer" id="timer"><div class="time" id="timeValue">2:00</div><div class="time-label">TIME LEFT</div></div><div class="team right"><i class="dot purple"></i><div><div class="team-label">TEAM PURPLE</div><div class="score" id="purpleScore">0</div></div></div></div>
-<div class="mini" style="display: block;"><canvas height="184" id="miniMap" width="306"></canvas></div>
+<div class="mini"><canvas height="184" id="miniMap" width="306"></canvas></div>
 <div id="eventBanner">🍬 お菓子ラッシュ</div><div id="locationTag">📍 THE HAUNTED WORLD</div><div id="toast"></div>
 <div id="bottomHud"><div class="stat-group"><div class="stat"><small>🍬 CANDIES</small><strong id="carry">0</strong></div><div class="stat combo"><small>✨ COMBO</small><strong id="combo">x1.0</strong></div><div class="stat keyStat"><small>🗝️ KEYS</small><strong id="keyCount">0/3</strong></div><div class="stat hpStat"><small>❤ HP</small><strong id="hpValue">♥♥♥</strong></div><div class="stat ability"><small>⚡ SPECIAL</small><strong id="ability">SPACE DASH · READY</strong></div></div><div aria-label="プレイ中の操作方法" class="control-guide">
 <span class="control-title">🎮 操作ガイド</span>
@@ -970,7 +1062,7 @@
 <span class="keyhint"><kbd>1〜6</kbd> リアクション（オンライン）</span>
 <span class="keyhint">🗺️ ミニマップをクリック／タップ：目的地指定</span>
 </div></div>
-<div class="mobile-controls"><button id="dashTouch">⚡<br>DASH</button><button id="pulseTouch">🌀<br>PULSE</button><button id="atkTouch">💥<br>ATTACK</button></div><div id="rxBar" style="display: none;"><button data-rx="0">👍</button><button data-rx="1">😂</button><button data-rx="2">😱</button><button data-rx="3">🍭</button><button data-rx="4">👻</button><button data-rx="5">🎃</button><button data-rx="6">🔥</button><button data-rx="7">💖</button><button data-rx="8">🙏</button><button data-rx="9">🤝</button></div>
+<div class="mobile-controls"><button id="dashTouch">⚡<br/>DASH</button><button id="pulseTouch">🌀<br/>PULSE</button><button id="atkTouch">💥<br/>ATTACK</button></div><div id="rxBar"><button data-rx="0">👍</button><button data-rx="1">😂</button><button data-rx="2">😱</button><button data-rx="3">🍭</button><button data-rx="4">👻</button><button data-rx="5">🎃</button></div>
 <section class="overlay" id="menuOverlay"><div class="dialog menu-dashboard nexus-menu menu-flow-dialog"><div class="menu-view menu-home" id="menuMainView"><div class="menu-dashboard-head nexus-head"><div class="menu-brand-row"><div class="hero">🍬</div><div class="menu-brand-copy"><div class="nexus-eyebrow">CANDY GAME  /  PLAY HUB</div><h2>お菓子集めゲーム</h2><div class="sub">5つのモードから選んでプレイ。設定は選んだモードの次の画面で行えます。</div></div></div><section class="nexus-section front-quick-settings" aria-label="フロント画面の設定とHTMLソース">
   <div class="nexus-section-head"><h3>クイック設定</h3><span>サウンド・明るさ・HTMLソース</span></div>
   <div class="front-quick-row">
@@ -979,7 +1071,7 @@
       <button class="secondary front-control-button" id="frontSoundToggle" type="button" aria-pressed="true">🔊 効果音 ON</button>
       <label for="frontSoundVolume">音量</label>
       <input id="frontSoundVolume" type="range" min="0" max="100" step="1" value="65">
-      <output id="frontSoundVolumeValue" for="frontSoundVolume">75%</output>
+      <output id="frontSoundVolumeValue" for="frontSoundVolume">65%</output>
       <button class="secondary front-control-button" id="frontSoundTest" type="button">▶ 試聴</button>
     </div>
     <div class="front-quick-item front-brightness-item">
@@ -995,7 +1087,7 @@
       <div class="front-source-actions"><button class="secondary front-source-button" id="frontSourceBtn" type="button">コードを表示する</button><button class="primary front-source-download" id="frontSourceDownloadBtn" type="button">⬇ HTMLをダウンロード</button></div>
     </div>
   </div>
-</section></div><section class="nexus-section"><div class="nexus-section-head"><h3>プレイ記録</h3><span>YOUR PROGRESS</span></div><div class="progress"><div style="flex:1;text-align:left"><strong id="levelLabel">LEVEL 27 · SECRET RUNNER</strong><div class="xpbar"><i id="xpFill" style="width: 69%;"></i></div><div id="xpText" style="margin-top:4px;color:#aaa4bc">138 / 200 XP</div></div><div style="text-align:right"><strong id="recordText">BEST 730</strong><div id="matchText" style="color:#aaa4bc;margin-top:4px">20 MATCHES · 🏅5/6</div></div></div></section><section class="nexus-section mode-picker-section"><div class="nexus-section-head"><h3>プレイモード</h3><span>遊びたいモードを1つ選んでください</span></div><div class="mode-row-note">モードを選ぶと、必要な設定だけが次の画面に表示されます。</div><div aria-label="プレイモード選択" class="mode-launchers mode-launchers-five"><button class="mode-launch tutorial" id="tutorialModeBtn"><span>🎓</span><b>チュートリアルプレイ</b><small>基本操作を順番に覚える</small></button><button class="mode-launch practice" id="practiceModeBtn"><span>🧪</span><b>練習プレイ</b><small>時間を気にせず自由に練習</small></button><button class="mode-launch solo" id="soloModeBtn" type="button"><span>🍬</span><b>通常一人プレイ</b><small>ローカルプレイ・CPU対戦</small></button><button class="mode-launch local2" id="localDuelBtn" type="button"><span>👥</span><b>通常二人プレイ</b><small>1台のPCで2人対戦</small></button><button class="mode-launch online" id="onlineModeBtn" type="button"><span>🌐</span><b>オンラインプレイ</b><small>手動接続・自動接続を選択</small></button></div></section><div class="terms-entry home-utilities"><button class="secondary" id="rulesOpenBtn">📖 遊び方・新ルール</button><button class="secondary" id="termsOpenBtn">📜 利用規約を読む</button><span>初回プレイ・オンライン対戦の前に同意が必要です。</span></div><section class="nexus-section"><div class="nexus-section-head"><h3>ルール・ガイド</h3><span>必要なときに開いて確認</span></div><details aria-label="ゲームルール表" class="front-rules menu-rules">
+</section></div><section class="nexus-section"><div class="nexus-section-head"><h3>プレイ記録</h3><span>YOUR PROGRESS</span></div><div class="progress"><div style="flex:1;text-align:left"><strong id="levelLabel">LEVEL 1 · RUNNER ROOKIE</strong><div class="xpbar"><i id="xpFill"></i></div><div id="xpText" style="margin-top:4px;color:#aaa4bc">0 / 200 XP</div></div><div style="text-align:right"><strong id="recordText">BEST 0</strong><div id="matchText" style="color:#aaa4bc;margin-top:4px">0 MATCHES</div></div></div></section><section class="nexus-section mode-picker-section"><div class="nexus-section-head"><h3>プレイモード</h3><span>遊びたいモードを1つ選んでください</span></div><div class="mode-row-note">モードを選ぶと、必要な設定だけが次の画面に表示されます。</div><div aria-label="プレイモード選択" class="mode-launchers"><button class="mode-launch tutorial" id="tutorialModeBtn"><span>🎓</span><b>チュートリアルプレイ</b><small>基本操作を順番に覚える</small></button><button class="mode-launch practice" id="practiceModeBtn"><span>🧪</span><b>練習プレイ</b><small>時間を気にせず自由に練習</small></button><button class="mode-launch solo" id="soloModeBtn" type="button"><span>🍬</span><b>通常一人プレイ</b><small>ローカルプレイ・CPU対戦</small></button><button class="mode-launch online" id="onlineModeBtn" type="button"><span>🌐</span><b>オンラインプレイ</b><small>手動接続・自動接続を選択</small></button></div></section><div class="terms-entry home-utilities"><button class="secondary" id="rulesOpenBtn">📖 遊び方・新ルール</button><button class="secondary" id="termsOpenBtn">📜 利用規約を読む</button><span>初回プレイ・オンライン対戦の前に同意が必要です。</span></div><section class="nexus-section"><div class="nexus-section-head"><h3>ルール・ガイド</h3><span>必要なときに開いて確認</span></div><details aria-label="ゲームルール表" class="front-rules menu-rules">
 <summary class="front-rules-heading"><strong>📘 ゲームルール表</strong><span>クリックして内容を表示 ▾</span></summary>
 <table class="front-rules-table">
 <thead><tr><th scope="col">項目</th><th scope="col">ルール</th></tr></thead>
@@ -1012,10 +1104,10 @@
 </table>
 </details></section>
 
-<div class="nexus-menu-footer"><div class="course-note" id="courseNote">📍 月夜の大墓地 — 巨大な墓標と古い礼拝堂が並ぶ、月明かりの広大な墓地。　探索ワールド：3600 × 2520</div><div class="notice">WASD / 矢印キー・マウス・タッチで移動。ミニマップをタップして目的地も指定できます。最大8体のプレイヤーアバターと、中央を追いかける4体のお化けが登場します。</div></div></div><div class="menu-view menu-subpage" id="normalSetupView" style="display:none"><div class="menu-subpage-head"><button class="secondary menu-back" id="normalBackBtn" type="button">← モード選択へ</button><div class="menu-subpage-title"><h2 id="normalModeTitle">通常一人プレイの設定</h2><p id="normalModeCaption">コース・試合時間・難易度・スーパー対戦モードを選んで開始します。</p></div></div><section class="nexus-section"><div class="nexus-section-head"><h3>試合設定</h3><span>コース・スーパー対戦・時間・難易度など</span></div><div class="settings"><div class="field"><label for="mapSelect">COURSE / 探索コース（全10種類）</label><select id="mapSelect"><option value="graveyard">🌙 01 月夜の大墓地</option><option value="forest">🌲 02 霧深き魔女の森</option><option value="town">🏚️ 03 ゴーストタウン</option><option value="candy">🍬 04 キャンディ王国</option><option value="ice">❄️ 05 氷結クリスタル峡谷</option><option value="volcano">🎃 06 パンプキン火山</option><option value="moon">🚀 07 月面ゴースト基地</option><option value="castle">🏰 08 呪われた古城</option><option value="swamp">🐸 09 呪いの沼地</option><option value="sky">☁️ 10 天空の幽霊庭園</option><option value="random">🎲 ランダムコース</option></select></div><div class="field"><label for="timeSelect">MATCH TIME</label><select id="timeSelect"><option value="120">2:00 CLASSIC</option><option value="60">1:00 BLITZ</option><option value="180">3:00 LONG HUNT</option></select></div><div class="field difficulty-field"><label for="difficulty">🎚️ 難易度を選択 / DIFFICULTY</label><select aria-describedby="difficultyDesc" id="difficulty"><option value="easy">🟢 EASY（かんたん）</option><option selected="" value="normal">🟡 NORMAL（ふつう）</option><option value="hard">🔴 HARD（むずかしい）</option></select><div aria-live="polite" class="difficulty-help" id="difficultyDesc">HARD：CPUと追跡お化けが速くなり、索敵・攻撃も積極的になります。</div></div><div class="field"><label for="hatSelect">OBJECT EMBLEM</label><select id="hatSelect"><option value="none">なし</option><option value="◆">◆ ダイヤ</option><option value="★">★ スター</option><option value="●">● ドット</option><option value="✦">✦ スパーク</option><option value="⬟">⬟ ヘキサ</option></select></div><div class="field"><label for="visualSelect">VISUAL EFFECT</label><select id="visualSelect"><option value="high">ULTRA</option><option value="medium">BALANCED</option><option value="low">LITE</option></select></div><div class="field"><label for="miniSelect">MINI MAP</label><select id="miniSelect"><option value="on">ON</option><option value="off">OFF</option></select></div></div></section><div class="menu-start-wrap normal-start-wrap"><button class="secondary" id="svToggle">🔥 スーパー対戦モード：ON</button><button class="primary" id="startBtn">▶ 通常一人プレイを開始</button></div><p class="sub normal-mode-note">スーパー対戦モードはこの画面でON／OFFを切り替えられます。設定後に開始してください。</p></div><div class="menu-view menu-subpage" id="onlineSetupView" style="display:none"><div class="menu-subpage-head"><button class="secondary menu-back" id="onlineBackBtn" type="button">← モード選択へ</button><div class="menu-subpage-title"><h2>オンラインプレイ</h2><p>友達とコードを交換する手動接続か、待機中の相手を探す自動接続を選んでください。</p></div></div><section class="nexus-section"><div class="nexus-section-head"><h3>オンライン対戦</h3><span>接続方法を選択</span></div><div class="online online-hub" id="onlineHub">
+<div class="nexus-menu-footer"><div class="course-note" id="courseNote">広大な月夜の墓地を探索しよう。世界は画面の外まで続いている！</div><div class="notice">WASD / 矢印キー・マウス・タッチで移動。ミニマップをタップして目的地も指定できます。最大8体のプレイヤーアバターと、中央を追いかける4体のお化けが登場します。</div></div></div><div class="menu-view menu-subpage" id="normalSetupView" style="display:none"><div class="menu-subpage-head"><button class="secondary menu-back" id="normalBackBtn" type="button">← モード選択へ</button><div class="menu-subpage-title"><h2 id="normalModeTitle">通常一人プレイの設定</h2><p id="normalModeCaption">コース・試合時間・難易度・スーパー対戦モードを選んで開始します。</p></div></div><section class="nexus-section"><div class="nexus-section-head"><h3>試合設定</h3><span>コース・スーパー対戦・時間・難易度など</span></div><div class="settings"><div class="field"><label for="mapSelect">COURSE / 探索コース（全10種類）</label><select id="mapSelect"><option value="graveyard">🌙 01 月夜の大墓地</option><option value="forest">🌲 02 霧深き魔女の森</option><option value="town">🏚️ 03 ゴーストタウン</option><option value="candy">🍬 04 キャンディ王国</option><option value="ice">❄️ 05 氷結クリスタル峡谷</option><option value="volcano">🎃 06 パンプキン火山</option><option value="moon">🚀 07 月面ゴースト基地</option><option value="castle">🏰 08 呪われた古城</option><option value="swamp">🐸 09 呪いの沼地</option><option value="sky">☁️ 10 天空の幽霊庭園</option><option value="random">🎲 ランダムコース</option></select></div><div class="field"><label for="timeSelect">MATCH TIME</label><select id="timeSelect"><option value="120">2:00 CLASSIC</option><option value="60">1:00 BLITZ</option><option value="180">3:00 LONG HUNT</option></select></div><div class="field difficulty-field"><label for="difficulty">🎚️ 難易度を選択 / DIFFICULTY</label><select aria-describedby="difficultyDesc" id="difficulty"><option value="easy">🟢 EASY（かんたん）</option><option selected="" value="normal">🟡 NORMAL（ふつう）</option><option value="hard">🔴 HARD（むずかしい）</option></select><div aria-live="polite" class="difficulty-help" id="difficultyDesc">NORMAL：CPUと追跡お化けの強さが標準です。</div></div><div class="field"><label for="hatSelect">OBJECT EMBLEM</label><select id="hatSelect"><option value="none">なし</option><option value="◆">◆ ダイヤ</option><option value="★">★ スター</option><option value="●">● ドット</option><option value="✦">✦ スパーク</option><option value="⬟">⬟ ヘキサ</option></select></div><div class="field"><label for="visualSelect">VISUAL EFFECT</label><select id="visualSelect"><option value="high">ULTRA</option><option value="medium">BALANCED</option><option value="low">LITE</option></select></div><div class="field"><label for="miniSelect">MINI MAP</label><select id="miniSelect"><option value="on">ON</option><option value="off">OFF</option></select></div></div></section><div class="menu-start-wrap normal-start-wrap"><button class="primary" id="startBtn">▶ 通常一人プレイを開始</button></div><p class="sub normal-mode-note">スーパー対戦モードはこの画面でON／OFFを切り替えられます。設定後に開始してください。</p></div><div class="menu-view menu-subpage" id="onlineSetupView" style="display:none"><div class="menu-subpage-head"><button class="secondary menu-back" id="onlineBackBtn" type="button">← モード選択へ</button><div class="menu-subpage-title"><h2>オンラインプレイ</h2><p>友達とコードを交換する手動接続か、待機中の相手を探す自動接続を選んでください。</p></div></div><section class="nexus-section"><div class="nexus-section-head"><h3>オンライン対戦</h3><span>接続方法を選択</span></div><div class="online online-hub" id="onlineHub">
 <div class="online-hub-heading"><div><b>🌐 オンライン対戦</b><p>接続方法を選んでください。2つの方式は接続の始め方が異なります。</p></div><span class="online-hub-tag">最大8人</span></div>
 <div aria-live="polite" class="online-role" id="frontRoleBadge" style="display:none"></div>
-<div class="online-nick-row"><label for="nick">プレイヤー名</label><input autocomplete="off" id="nick" maxlength="10" placeholder="ニックネーム"></div>
+<div class="online-nick-row"><label for="nick">プレイヤー名</label><input autocomplete="off" id="nick" maxlength="10" placeholder="ニックネーム"/></div>
 <div class="online-choice-grid">
 <section aria-labelledby="manualChoiceTitle" class="online-choice manual-choice">
 <div class="online-choice-kicker">MODE 01 · INVITE</div>
@@ -1031,7 +1123,7 @@
 <p class="online-choice-lead">待機中のプレイヤーと自動でランダム接続</p>
 <ol><li>共通のマッチングサーバーに接続</li><li>待機列に自動登録</li><li>相手が見つかると自動で対戦ロビーへ</li></ol>
 <label class="auto-url-label" for="autoServerUrl">マッチングサーバー URL（WSS）</label>
-<div class="auto-url-row"><input autocomplete="url" id="autoServerUrl" placeholder="wss://あなたのマッチングサーバー" type="url"><button class="auto-start-btn" id="autoMatchBtn">自動接続</button></div>
+<div class="auto-url-row"><input autocomplete="url" id="autoServerUrl" placeholder="wss://あなたのマッチングサーバー" type="url"/><button class="auto-start-btn" id="autoMatchBtn">自動接続</button></div>
 <button class="auto-cancel-btn" id="autoCancelBtn" style="display:none">待機をキャンセル</button>
 <div aria-live="polite" class="auto-match-msg" id="autoMatchMsg"></div>
 <div class="online-choice-foot"><strong>特徴：</strong>コード交換不要・中継サーバーの公開が必要</div>
@@ -1042,7 +1134,7 @@
 <section aria-labelledby="rulesTitle" class="overlay" id="rulesOverlay" style="display:none"><div class="dialog rules-dialog"><div class="hero">🧭</div><h2 id="rulesTitle">遊び方・ゲームルール</h2><div class="sub">8体のキューブプレイヤーと、異なるAIで動く4体のお化け。お菓子を運びながら、追跡をかわして秘密通路を目指そう。</div><div class="rules-grid"><div class="rule-card"><b>① 8体のプレイヤー</b><p>緑・紫の2チームに分かれた四角い物体アバターが合計8体登場します。オンライン対戦は最大8人（各チーム4人）で、参加枠が空くとCPUが補います。ひとりプレイではあなた以外をCPUが担当します。</p></div><div class="rule-card"><b>② お菓子を集めて納品</b><p>フィールドに散らばるお菓子や特大お菓子を集め、自分のチームの基地へ持ち帰ると得点になります。コンボを続けると納品ボーナスが増えます。</p></div><div class="rule-card"><b>③ お菓子の奪い合い</b><p>相手プレイヤーに接触したり、Qキーのパルスショットを当てたりすると、相手が運んでいるお菓子を奪ったり落とさせたりできます。</p></div><div class="rule-card"><b>④ 中央の追跡お化け4体</b><p>4体のお化けは別々のAIを持つNPCです。①直追型は近くのプレイヤーを直接追跡、②先回り型はお菓子や鍵を多く持つ相手の進行先を予測、③門番型は中央の秘密門を警備、④巡回型は地区を巡回して近づいた相手に短く突進します。捕まるとHPが1減り、お菓子の一部を落とします。HPが0になると基地付近へ戻され、3HPで復帰します。</p></div><div class="rule-card"><b>⑤ 鍵を3本集めて秘密通路</b><p>自分専用の鍵を3本すべて集めると中央の秘密門が開きます。入口から曲がりくねった地下通路を自分で歩き、奥の秘密の小部屋まで進めます。通路は反対側から戻ることもできます。</p></div><div class="rule-card"><b>⑥ パワー・イベント・お化けキング2体</b><p>試合中盤に強力なお化けキングが2体同時に出現します。Qキーで攻撃して撃破すると、倒したチームに1体につき100ポイント！2体とも強敵なので、仲間と協力して挑もう。</p></div></div><div class="rule-card"><b>操作方法</b><p>WASD / 矢印キー / マウス / タッチ：移動　・　SPACE：ダッシュ　・　E：吸引パルス　・　Q：攻撃　・　ミニマップ：目的地指定</p></div><div class="rules-actions"><button class="secondary" id="rulesCloseBtn">閉じる</button><button class="primary" id="rulesStartBtn">ルールを確認して遊ぶ</button></div></div></section>
 <section aria-labelledby="termsTitle" class="overlay" id="termsOverlay" style="display:none"><div class="dialog terms-dialog"><div class="hero">📜</div><h2 id="termsTitle">お菓子集めゲーム 利用規約</h2><div class="terms-intro">本ゲームを利用する前に、以下の内容をお読みください。ゲームの開始またはオンライン対戦には、本規約への同意が必要です。</div><div class="terms-body">
 <section><h3>第1条（適用・同意）</h3><p>本規約は「お菓子集めゲーム」（以下「本ゲーム」）の利用条件を定めるものです。利用者は、本規約を確認して同意したうえで本ゲームを利用してください。未成年者は、保護者の確認・同意を得て利用してください。</p></section>
-<section><h3>第2条（ゲームの利用）</h3><p>本ゲームはブラウザー上で遊ぶゲームです。チュートリアル、練習ステージ、同一PC 2人対戦、オンライン対戦、最大8体のプレイヤーアバター、4体の追跡NPC、お菓子の収集・納品・奪取、鍵3本で開く実際に歩いて移動する秘密通路等の機能を含みます。利用者は自身の責任において対応するブラウザー・端末・通信環境を用いて利用するものとします。ゲームの内容、コース、機能、表示等は予告なく変更・停止される場合があります。</p></section>
+<section><h3>第2条（ゲームの利用）</h3><p>本ゲームはブラウザー上で遊ぶゲームです。チュートリアル、練習ステージ、オンライン対戦、最大8体のプレイヤーアバター、4体の追跡NPC、お菓子の収集・納品・奪取、鍵3本で開く実際に歩いて移動する秘密通路等の機能を含みます。利用者は自身の責任において対応するブラウザー・端末・通信環境を用いて利用するものとします。ゲームの内容、コース、機能、表示等は予告なく変更・停止される場合があります。</p></section>
 <section><h3>第3条（禁止事項）</h3><p>利用者は、法令または公序良俗に反する行為、他人への嫌がらせ・脅迫・差別的な表現、他人や団体になりすます行為、個人情報を無断で公開する行為、ゲームや通信の妨害、不正なプログラム・改造データの使用、脆弱性の悪用、その他本ゲームの運営や他の利用者に迷惑をかける行為をしてはいけません。</p></section>
 <section><h3>第4条（オンライン対戦）</h3><p>オンライン対戦はWebRTCによる端末間通信を利用します。招待コード・返信コード方式に加え、ルームコード不要の自動マッチング方式があります。自動マッチングには利用者または運営者が用意したWebSocket中継サーバーが必要です。招待コード・返信コードは接続のための情報を含むため、対戦相手以外に公開しないでください。接続相手には、ニックネーム、選択した見た目、プレイヤーの位置・行動、試合状況等が送信されます。接続補助のため、外部STUNサーバー（stun.l.google.com 等）へ通信する場合があります。通信相手やネットワーク環境によっては、IPアドレス等のネットワーク情報が相手側から確認できる場合があります。知らない相手とのコード交換には十分注意してください。</p></section>
 <section><h3>第5条（データの保存・通信）</h3><p>ハイスコア、対戦回数、勝利数、経験値、実績等は、利用者のブラウザー内ストレージ（localStorage）に保存されます。鍵の取得状況、HP、秘密通路の利用状況は原則として試合中のみ使用され、試合終了後に永続保存されません。ブラウザーの設定、データ削除、端末変更、プライベートブラウズ等により、保存データが消失することがあります。本ゲームには、これらの記録を別端末へ自動同期する機能はありません。オンライン対戦中は、第4条に記載したゲーム進行情報が接続相手へ送信されます。</p></section>
@@ -1086,12 +1178,15 @@
 </aside>
 </div>
 </div></section>
-<section class="overlay code-present-overlay" id="codePresentationOverlay" style="display:none" aria-labelledby="codePresentationTitle"><div class="dialog code-present-dialog"><div class="hero">🔐</div><h2 id="codePresentationTitle">接続コード</h2><div class="sub" id="codePresentationHelp">このコードを対戦相手に見せるか、コピーして送ってください。</div><div class="code-present-label" id="codePresentationKind">INVITATION CODE</div><textarea id="presentCode" readonly="" spellcheck="false" aria-label="提示用接続コード"></textarea><div class="code-present-actions"><button class="primary" id="presentCodeCopy">📋 コードをコピー</button><button class="secondary" id="presentCodeClose">閉じる</button></div></div></section>
-
+<section class="overlay code-present-overlay" id="codePresentationOverlay" style="display:none" aria-labelledby="codePresentationTitle"><div class="dialog code-present-dialog"><div class="hero">🔐</div><h2 id="codePresentationTitle">接続コード</h2><div class="sub" id="codePresentationHelp">このコードを対戦相手に見せるか、コピーして送ってください。</div><div class="code-present-label" id="codePresentationKind">INVITATION CODE</div><textarea id="presentCode" readonly spellcheck="false" aria-label="提示用接続コード"></textarea><div class="code-present-actions"><button class="primary" id="presentCodeCopy">📋 コードをコピー</button><button class="secondary" id="presentCodeClose">閉じる</button></div></div></section>
+<section class="overlay" id="sourceOverlay" style="display:none"><div class="dialog source-dialog"><div class="hero">&lt;/&gt;</div><h2>HTMLソースコード</h2><div class="sub">HTML・CSS・JavaScriptを切り替えて表示し、コピーまたは保存できます。</div>
+<div class="source-tabs"><button class="secondary active" data-src-tab="html">HTML</button><button class="secondary" data-src-tab="css">CSS</button><button class="secondary" data-src-tab="js">JavaScript</button></div>
+<textarea aria-label="ソースコード" id="sourceCodeArea" readonly="" spellcheck="false"></textarea>
+<div class="source-actions"><button class="secondary" id="sourceCopyBtn">📋 表示中をコピー</button><button class="secondary" id="sourceSaveBtn">⬇ 表示中を保存</button><button class="secondary" id="sourceSaveAllBtn">HTML全体を保存</button><button class="secondary" id="sourceCloseBtn">閉じる</button></div></div></section>
 <div class="mode-hud" id="tutorialHud" style="display:none"><b>🎓 チュートリアル</b><span id="tutorialTask">WASDで移動してみよう。</span><small id="tutorialStep">STEP 1 / 4</small><button class="secondary" id="tutorialExitBtn">チュートリアルを終了</button></div>
 <div class="mode-hud" id="practiceHud" style="display:none"><b>🧪 練習ステージ</b><span>時間制限なし。お菓子収集・攻撃・秘密通路を自由に練習できます。</span><button class="secondary" id="practiceExitBtn">練習を終了</button></div>
-<div class="mode-hud local2-hud" id="local2Hud" style="display:none"><b>👥 2人対戦</b><span id="local2Status">P1: WASD / SPACE / Q / E　｜　P2: 矢印 / 右SHIFT / ENTER / 右CTRL</span><small id="local2Stats">P1 ♥♥♥　🍬0　｜　P2 ♥♥♥　🍬0</small><button class="secondary" id="local2ExitBtn">2人対戦を終了</button></div>
-<section class="overlay" id="joinOverlay" style="display:none"><div class="dialog"><div class="hero">🔑</div><h2>JOIN ROOM</h2><div class="sub">① ホストから届いた「招待コード」を貼り付けて「返信コードを作る」を押す<br>② 出てきた「返信コード」をホストに送る<br>③ ホストが入力すると自動で接続されます</div><textarea class="codebox" id="inviteIn" placeholder="招待コード（GDO…）を貼り付け"></textarea><button class="primary" id="mkReply">返信コードを作る</button><textarea class="codebox" id="replyOut" placeholder="返信コードがここに出ます" readonly=""></textarea><div class="lobby-code-actions"><button class="secondary" id="copyReply">📋 返信コードをコピー</button><button class="secondary" id="presentReplyCodeBtn" style="display:none">🔎 返信コードを大きく提示</button></div><div class="sub" id="joinMsg"></div><button class="secondary" id="joinExit">戻る</button></div></section><div id="pwHud" style="display: none;"><b id="pwNum">Lv.0</b> <span>お菓子を集めてレベルアップ！</span><div id="pwBar"><i></i></div><div id="pwIcons"></div></div><div id="pwLv"><div><h3>🎉 LEVEL UP！</h3><p>強化を1つ選ぼう（キー 1・2・3 でも選べます）</p><div class="pwCards"></div></div></div><div id="svHud" style="display: none;"><div id="svTxt"></div><div id="svBar"><i></i></div></div><button id="svBtn" style="display: none;">🔥</button><div id="sbBox"></div></main><footer class="footer"><span>🍬 <strong>お菓子集めゲーム</strong>　全10コース / 広大な探索ワールド / 追跡お化けAI</span><span id="bestLabel">BEST: 730 PTS</span></footer></div>
+
+<section class="overlay" id="joinOverlay" style="display:none"><div class="dialog"><div class="hero">🔑</div><h2>JOIN ROOM</h2><div class="sub">① ホストから届いた「招待コード」を貼り付けて「返信コードを作る」を押す<br/>② 出てきた「返信コード」をホストに送る<br/>③ ホストが入力すると自動で接続されます</div><textarea class="codebox" id="inviteIn" placeholder="招待コード（GDO…）を貼り付け"></textarea><button class="primary" id="mkReply">返信コードを作る</button><textarea class="codebox" id="replyOut" placeholder="返信コードがここに出ます" readonly=""></textarea><div class="lobby-code-actions"><button class="secondary" id="copyReply">📋 返信コードをコピー</button><button class="secondary" id="presentReplyCodeBtn" style="display:none">🔎 返信コードを大きく提示</button></div><div class="sub" id="joinMsg"></div><button class="secondary" id="joinExit">戻る</button></div></section></main><footer class="footer"><span>🍬 <strong>お菓子集めゲーム</strong>　全10コース / 広大な探索ワールド / 追跡お化けAI</span><span id="bestLabel">BEST: 0 PTS</span></footer></div>
 <script>
 (()=>{'use strict';const LS=(()=>{try{localStorage.setItem('_t','1');localStorage.removeItem('_t');return localStorage}catch(e){const m={};return{getItem:k=>(k in m?m[k]:null),setItem:(k,v)=>{m[k]=String(v)}}}})();
 const W=3600,H=2520,TAU=Math.PI*2,$=id=>document.getElementById(id),canvas=$('game'),ctx=canvas.getContext('2d'),mini=$('miniMap'),mctx=mini.getContext('2d');
@@ -1752,16 +1847,15 @@ function sbDraw(){const E=s=>String(s).replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0
 const _svRs=reset;reset=function(){_svRs.apply(this,arguments);SV.g=0;SV.fx=[];SV.time=false;if(SV.on&&!net.on)setTimeout(()=>toast('🔥 スーパー対戦！ゲージ満タンで R キー'),400)};
 
 /* ===== 追加モード：チュートリアル／練習／同一PC 2人／自動マッチング／ソースビュー ===== */
-let APP_MODE='normal',tutorialState=null,localP2=null,autoQueue=null,sourceTab='html';
+let APP_MODE='normal',tutorialState=null,autoQueue=null,sourceTab='html';
 const MODE_UI={
   tutorial:['まずWASDで120px以上移動しよう。','お菓子を1個以上集めよう。','自分の基地まで戻ってお菓子を納品しよう。','SPACE・Q・Eをそれぞれ1回使ってみよう。','チュートリアル完了！そのまま自由に練習できます。'],
 };
 function setModeHud(){
  $('tutorialHud').style.display=APP_MODE==='tutorial'&&state==='playing'?'flex':'none';
  $('practiceHud').style.display=APP_MODE==='practice'&&state==='playing'?'flex':'none';
- $('local2Hud').style.display=APP_MODE==='local2'&&state==='playing'?'flex':'none';
 }
-function clearModeRuntime(){tutorialState=null;localP2=null;for(const id of ['tutorialHud','practiceHud','local2Hud'])$(id).style.display='none';}
+function clearModeRuntime(){tutorialState=null;for(const id of ['tutorialHud','practiceHud'])$(id).style.display='none';}
 function applyModeAfterStart(){
  clearModeRuntime();
  if(APP_MODE==='tutorial'){
@@ -1774,12 +1868,6 @@ function applyModeAfterStart(){
   // Safe practice arena: retain the CPU runners to practice attacks/collection, but remove the four chasing ghosts and boss.
   haunters=[];bosses=[];boss=null;bossSpawned=true;timeLeft=roundLength=999999;setModeHud();
   toast('🧪 練習ステージ開始！時間制限・追跡お化け・キングなしで練習できます。');
- }else if(APP_MODE==='local2'){
-  const purpleCPU=ghosts.find(g=>g.team==='purple'&&!g.isPlayer);
-  if(purpleCPU)ghosts=ghosts.filter(g=>g!==purpleCPU);
-  localP2=makeRunner('localP2','purple',W-190,H/2,true);localP2.localPlayer=2;localP2.name='P2';localP2.face=Math.PI;
-  ghosts.push(localP2);setModeHud();
-  toast('👥 2人対戦！P1はWASD、P2は矢印キーで操作。');
  }else setModeHud();
 }
 const _modeStartGame=startGame;
@@ -1809,33 +1897,9 @@ update=function(dt){
   else if(t.step===2&&stats.bank>0)tutorialAdvance();
   else if(t.step===3&&t.actions.dash&&t.actions.attack&&t.actions.pulse)tutorialAdvance();
  }
- if(APP_MODE==='local2'&&state==='playing'&&player&&localP2){
-  trySecretPassage(localP2);
-  const mx=(player.x+localP2.x)/2,my=(player.y+localP2.y)/2;
-  camera.x+=(clamp(mx-VIEW_W/2,0,W-VIEW_W)-camera.x)*Math.min(1,dt*5);
-  camera.y+=(clamp(my-VIEW_H/2,0,H-VIEW_H)-camera.y)*Math.min(1,dt*5);
-  $('local2Stats').textContent='P1 '+('♥'.repeat(Math.max(0,player.hp||0)))+' 🍬'+player.carry+'　｜　P2 '+('♥'.repeat(Math.max(0,localP2.hp||0)))+' 🍬'+localP2.carry;
- }
  setModeHud();
 };
 
-const _modeMoveRunner=moveRunner;
-moveRunner=function(g,dt){
- if(APP_MODE!=='local2'||state!=='playing')return _modeMoveRunner(g,dt);
- const ar=['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'],saved={};for(const k of ar)saved[k]=keys[k];
- const lower=['w','a','s','d','W','A','S','D'],savedLower={};for(const k of lower)savedLower[k]=keys[k];
- const wasPointer=pointer.active;
- if(g===player){for(const k of ar)keys[k]=false;pointer.active=false;const out=_modeMoveRunner(g,dt);for(const k of ar)keys[k]=saved[k];pointer.active=false;return out}
- if(g===localP2){for(const k of lower)keys[k]=false;pointer.active=false;const out=_modeMoveRunner(g,dt);for(const k of lower)keys[k]=savedLower[k];pointer.active=false;return out}
- pointer.active=wasPointer;return _modeMoveRunner(g,dt);
-};
-const _modeCollectKeys=collectKeys;
-collectKeys=function(g){if(APP_MODE==='local2'&&g===localP2){const before=player;try{player=localP2;return _modeCollectKeys(g)}finally{player=before}}return _modeCollectKeys(g)};
-const _modeDrawRunner=drawRunner;
-drawRunner=function(g){if(APP_MODE==='local2'&&g===localP2){const was=g.isPlayer;g.isPlayer=false;g.name='P2';_modeDrawRunner(g);g.isPlayer=was;return}_modeDrawRunner(g)};
-function local2Dash(){if(!localP2||state!=='playing'||localP2.dashCd>0)return;const g=localP2;g.dashTime=.24;g.dashCd=4.2;let a=Math.atan2(g.vy,g.vx);if(Math.abs(g.vx)+Math.abs(g.vy)<5)a=Math.PI;g.dashVX=Math.cos(a);g.dashVY=Math.sin(a);addParticles(g.x,g.y,'#d4a7ff',16,1.2);customSfx('dash');}
-function local2Pulse(){if(!localP2||state!=='playing'||localP2.pulseCd>0)return;const g=localP2;g.power='magnet';g.powerTime=5;g.shield=Math.max(g.shield,1.2);g.pulseCd=12;addParticles(g.x,g.y,'#d4a7ff',30,1.4);customSfx('pulse');}
-function local2Attack(){if(!localP2||state!=='playing')return;const g=localP2;let a=Math.hypot(g.vx,g.vy)>25?Math.atan2(g.vy,g.vx):Math.PI;fire(g,a)}
 window.addEventListener('keydown',e=>{
  if(e.target&&['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;
  if(APP_MODE==='tutorial'&&tutorialState&&state==='playing'){
@@ -1843,18 +1907,12 @@ window.addEventListener('keydown',e=>{
   if(e.key.toLowerCase()==='q')tutorialState.actions.attack=true;
   if(e.key.toLowerCase()==='e')tutorialState.actions.pulse=true;
  }
- if(APP_MODE==='local2'&&state==='playing'&&!e.repeat){
-  if(e.code==='Enter') {e.preventDefault();local2Attack()}
-  if(e.code==='ShiftRight')local2Dash();
-  if(e.code==='ControlRight')local2Pulse();
- }
 });
 
 function startMode(mode){if(!requireTerms())return;APP_MODE=mode;const saved=$('mapSelect').value;if(mode==='tutorial')$('mapSelect').value='candy';startGame();$('mapSelect').value=saved;}
 $('tutorialModeBtn').onclick=()=>startMode('tutorial');
 $('practiceModeBtn').onclick=()=>startMode('practice');
-$('localDuelBtn').onclick=()=>startMode('local2');
-$('tutorialExitBtn').onclick=backMenu;$('practiceExitBtn').onclick=backMenu;$('local2ExitBtn').onclick=backMenu;
+$('tutorialExitBtn').onclick=backMenu;$('practiceExitBtn').onclick=backMenu;
 
 // Lobby strength choices are host-controlled; guests see the selected settings in the lobby news/status area.
 function syncLobbyStrength(){if(!net.on||!net.host||!net.room)return;net.room.presence({haunt:$('onlineHaunterStrength').value,boss:$('onlineBossStrength').value}).catch(()=>{})}
@@ -1918,15 +1976,14 @@ function showMenuView(which){
  Object.keys(views).forEach(k=>{if(views[k])views[k].style.display=(k===which?'':'none')});
  const box=$('menuOverlay .menu-flow-dialog');if(box)box.scrollTop=0;
 }
-function openNormalSetup(mode){
- selectedNormalMode=mode==='local2'?'local2':'normal';
- $('normalModeTitle').textContent=selectedNormalMode==='local2'?'通常二人プレイの設定':'通常一人プレイの設定';
- $('normalModeCaption').textContent=selectedNormalMode==='local2'?'1台のPCで2人対戦します。コース・試合時間・難易度などを選んでください。':'ローカルでCPUと対戦します。コース・試合時間・難易度などを選んでください。';
- $('startBtn').textContent=selectedNormalMode==='local2'?'▶ 通常二人プレイを開始':'▶ 通常一人プレイを開始';
+function openNormalSetup(){
+ selectedNormalMode='normal';
+ $('normalModeTitle').textContent='通常一人プレイの設定';
+ $('normalModeCaption').textContent='ローカルでCPUと対戦します。コース・試合時間・難易度などを選んでください。';
+ $('startBtn').textContent='▶ 通常一人プレイを開始';
  showMenuView('normal');
 }
-$('soloModeBtn').onclick=()=>openNormalSetup('normal');
-$('localDuelBtn').onclick=()=>openNormalSetup('local2');
+$('soloModeBtn').onclick=()=>openNormalSetup();
 $('onlineModeBtn').onclick=()=>showMenuView('online');
 $('normalBackBtn').onclick=()=>showMenuView('main');
 $('onlineBackBtn').onclick=()=>showMenuView('main');
@@ -2048,8 +2105,4 @@ showMenuView('main');
 })();
 </script>
 
-
-<section class="overlay" id="sourceOverlay" style="display:none"><div class="dialog source-dialog" style="display: flex !important; position: relative !important; z-index: 1 !important; width: min(1100px, 98vw) !important; height: min(94dvh, 900px) !important; max-height: 94dvh !important; min-height: 0px !important; margin: auto !important; overflow: hidden !important;"><div class="hero">&lt;/&gt;</div><h2>HTMLソースコード</h2><div class="sub">HTML・CSS・JavaScriptを切り替えて表示し、コピーまたは保存できます。</div>
-<div class="source-tabs"><button class="secondary active" data-src-tab="html">HTML</button><button class="secondary" data-src-tab="css">CSS</button><button class="secondary" data-src-tab="js">JavaScript</button></div>
-<textarea aria-label="ソースコード" id="sourceCodeArea" readonly="" spellcheck="false"></textarea>
-<div class="source-actions"><button class="secondary" id="sourceCopyBtn">📋 表示中をコピー</button><button class="secondary" id="sourceSaveBtn">⬇ 表示中を保存</button><button class="secondary" id="sourceSaveAllBtn">HTML全体を保存</button><button class="secondary" id="sourceCloseBtn">閉じる</button></div></div></section></body></html>
+</body></html>
